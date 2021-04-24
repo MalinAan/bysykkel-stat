@@ -1,9 +1,11 @@
 import './App.css';
 import data from "../src/trips.json";
 import logo from "./bysykkel-logo.svg";
+import bike from "./bike.svg";
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie'
 import { ResponsiveLine } from '@nivo/line'
+
 
 const norwegianMonths = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
 
@@ -160,8 +162,6 @@ function App() {
 
     const allLines = [{"id": "alle-turer", "color": "red", "data": linesData}]
 
-    // Tenk litt på hvordan det skal struktures.
-
 
 
     const monthsSortedDescendingTrips = Object.entries(months)
@@ -273,20 +273,18 @@ function App() {
                         />
                     </div>
 
-
-
+                </div>
+                <div className="number-of-stations">
+                    <h3 className="number-of-stations-heading"> Du har besøkt {stationsSortedDescendingTrips.length} ulike stasjoner.</h3>
+                    <img className="bike-logo" src={bike}/>
                 </div>
                 <div className="info-element">
-                    <h3> Du har besøkt totalt {stationsSortedDescendingTrips.length} antall stasjoner!</h3>
+                    <h2>Topp 5 stasjoner</h2>
                     <tbody>
                     <table className="styled-table">
-                        <tr>
-                            <th>Stasjoner</th>
-                            <th>Antall ganger besøkt</th>
-                        </tr>
-                        {stationsSortedDescendingTrips.map(([month, numberOfTripsPerMonth]) => (
+                        {stationsSortedDescendingTrips.slice(0,5).map(([month, numberOfTripsPerMonth], index) => (
                             <tr key={month}>
-                                <td>{month}</td>
+                                <td className="td-month">{month}</td>
                                 <td>{numberOfTripsPerMonth}</td>
                             </tr>
                         ))}
