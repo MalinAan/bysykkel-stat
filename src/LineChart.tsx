@@ -1,14 +1,10 @@
 import './App.css';
-import data from "../src/trips.json";
-import logo from "./bysykkel-logo.svg";
-import bike from "./bike.svg";
 import React from 'react';
-import { ResponsivePie } from '@nivo/pie'
-import { ResponsiveLine } from '@nivo/line'
+import {ResponsiveLine} from '@nivo/line'
 
 interface Props {
     years: { [key: string]: number };
-    monthsData:  { [key: string]: MonthData }
+    monthsData: { [key: string]: MonthData }
 }
 
 interface LinesDataToYears {
@@ -21,6 +17,7 @@ interface LineChartData {
     x: string; // Month
     y: number; // Trips
 }
+
 const norwegianMonths = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
 
 
@@ -32,16 +29,14 @@ interface MonthData {
     date: Date;
     yearString: string;
 }
+
 const LineChart = (props: Props) => {
 
-    function getAllMonthsInYearArray(){
+    function getAllMonthsInYearArray() {
 
 
-        let allYearsWithMonths:LinesDataToYears[]= Object.entries(props.years).map(([year, _]) =>
-
-            {
-                let emptyMonths: LineChartData[] = norwegianMonths.map(month =>
-                    {
+        let allYearsWithMonths: LinesDataToYears[] = Object.entries(props.years).map(([year, _]) => {
+                let emptyMonths: LineChartData[] = norwegianMonths.map(month => {
                         return {x: month, y: 0}
                     }
                 )
@@ -55,23 +50,25 @@ const LineChart = (props: Props) => {
         )
 
         Object.entries(props.monthsData).forEach(([monthKey, monthData]) => {
-            let year = allYearsWithMonths.find(y => y.id == monthData.yearString);
-            if(year) {
-                let month = year.data.find(m => m.x == monthData.monthName)
-                if(month) {
-                    month.y = monthData.trips;
+                let year = allYearsWithMonths.find(y => y.id == monthData.yearString);
+                if (year) {
+                    let month = year.data.find(m => m.x == monthData.monthName)
+                    if (month) {
+                        month.y = monthData.trips;
+                    }
                 }
-            }}
+            }
         )
 
         return allYearsWithMonths
     }
-    return ( <div className="line-chart-element">
+
+    return (<div className="line-chart-element">
         <ResponsiveLine
             data={getAllMonthsInYearArray()}
-            margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-            xScale={{ type: 'point' }}
-            yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false }}
+            margin={{top: 50, right: 110, bottom: 50, left: 60}}
+            xScale={{type: 'point'}}
+            yScale={{type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false}}
             yFormat=" >-.2f"
             curve="basis"
             axisTop={null}
@@ -97,12 +94,12 @@ const LineChart = (props: Props) => {
             }}
             enableGridX={false}
             enableGridY={false}
-            colors={{scheme:"red_yellow_green"}}
+            colors={{scheme: "red_yellow_green"}}
             enablePoints={false}
             pointSize={10}
-            pointColor={{ theme: 'background' }}
+            pointColor={{theme: 'background'}}
             pointBorderWidth={2}
-            pointBorderColor={{ from: 'serieColor', modifiers: [] }}
+            pointBorderColor={{from: 'serieColor', modifiers: []}}
             pointLabelYOffset={-12}
             areaOpacity={0.15}
             isInteractive={true}
@@ -119,7 +116,8 @@ const LineChart = (props: Props) => {
                 itemOpacity: 0.75,
                 symbolSize: 12,
                 symbolShape: 'circle',
-                symbolBorderColor: 'rgba(0, 0, 0, .5)',}]}
+                symbolBorderColor: 'rgba(0, 0, 0, .5)',
+            }]}
         />
     </div>);
 }
