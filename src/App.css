@@ -5,7 +5,6 @@
 }
 
 .styled-table {
-  /*border-collapse: collapse;*/
   margin: 15px 0;
   font-size: 1.5em;
   font-family: sans-serif;
@@ -16,15 +15,11 @@
 }
 
 .container {
-  /*background-color: #282c34;*/
   min-height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /*align-items: center;*/
-  /*justify-content: center;*/
   font-size: calc(10px + 2vmin);
-  /*color: white;*/
 }
 
 /*Heading*/
@@ -37,7 +32,6 @@
   justify-content: center;
   align-items: center;
   background-color: #E74645;
-  /*background-color: #FF4D4D;*/
   color: white;
 }
 .header-logo {
@@ -52,13 +46,12 @@
 
 .trips-element,.info-element,.number-of-stations {
   flex-grow: 1;
-  min-width: 40vw;
+  min-width: 40%;
 }
 
 .trips-element {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -69,32 +62,22 @@
   align-items: center;
 }
 
-
-.trips-text{
-
-}
-.non-coloured{
-
-}
 .coloured{
   color: #FB7756;
 }
-
 
 .month-text {
   display: flex;
 }
 
-
 .bike-logo{
   fill: #FACD60;
   flex-direction: column;
-  min-height: 50vh;
+  height: 50%;
 
 }
 .number-of-stations-heading {
   flex-direction: column;
-  min-height: 50vh;
 }
 
 .pie-element {

@@ -275,7 +275,7 @@ function App() {
 
                 </div>
                 <div className="number-of-stations">
-                    <h3 className="number-of-stations-heading"> Du har besøkt {stationsSortedDescendingTrips.length} ulike stasjoner.</h3>
+                    <h2 className="number-of-stations-heading"> Du har besøkt {stationsSortedDescendingTrips.length} ulike stasjoner.</h2>
                     <img className="bike-logo" src={bike}/>
                 </div>
                 <div className="info-element">
