@@ -5,6 +5,7 @@ import bike from "./bike.svg";
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie'
 import { ResponsiveLine } from '@nivo/line'
+import PieChart from "./PieChart";
 
 
 const norwegianMonths = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
@@ -34,8 +35,6 @@ function getAllMonthsInYearArray(){
         y: number; // Trips
     }
 
-    const numberOfYears = Object.entries(years).length;
-
     let allYearsWithMonths:LinesDataToYears[]= Object.entries(years).map(([year, _]) =>
 
         {
@@ -53,7 +52,6 @@ function getAllMonthsInYearArray(){
         }
     )
 
-    //let monthsIntoYears:LinesDataToYears[] = [];
     Object.entries(monthsData).forEach(([monthKey, monthData]) => {
         let year = allYearsWithMonths.find(y => y.id == monthData.yearString);
         if(year) {
@@ -64,29 +62,15 @@ function getAllMonthsInYearArray(){
         }}
     )
 
-    //const allLines = [{"id": "alle-turer", "color": "red", "data": allYearsWithMonths}]
-    console.log(allYearsWithMonths)
     return allYearsWithMonths
 }
 
 function App() {
 
-    // Kan ha:
-    // Gjennomsnittstur (lengde)
-    // Vanligste tur
-    // Lengste tur?
-    // Kart over turer / Heatmap.
-    // Hadde vært kult med noe visuelt på antall stasjoner.
-
     const numberOfTrips = data.length
-
     let months: { [key: string]: number } = {};
     let stations: { [key: string]: number } = {};
-    interface PieData {
-        id: string;
-        value: number;
-        label: string;
-    }
+
 
     interface LineChartData {
         x: string; // Month
@@ -133,35 +117,6 @@ function App() {
 
     })
 
-    const pies = Object.entries(years).map(([year, numberOfTrips]) => {
-        const piePart:PieData =
-            {
-                label:year,
-                id:year,
-                value:numberOfTrips
-            }
-            return piePart;
-        }
-    )
-    interface LinesDataToYears {
-        id: string;
-        color: string;
-        data: LineChartData[]
-    }
-
-    let monthsIntoYears:LinesDataToYears[] = [];
-    const linesData = Object.entries(monthsData).map(([monthKey, monthData]) => {
-            const lineMonth:LineChartData =
-                {
-                    x:monthData.monthNumber + " " + monthData.year,
-                    y:monthData.trips
-                }
-            return lineMonth;
-        }
-    )
-
-    const allLines = [{"id": "alle-turer", "color": "red", "data": linesData}]
-
 
 
     const monthsSortedDescendingTrips = Object.entries(months)
@@ -171,7 +126,6 @@ function App() {
         .sort(([station1, numberOfTripsPerMonth1], [station2, numberOfTripsPerMonth2]) => numberOfTripsPerMonth2 - numberOfTripsPerMonth1)
 
     return (
-        <div className="App">
 
             <div className="container">
                 <div className="header">
@@ -181,34 +135,15 @@ function App() {
                     <div className="header-text">
                         <h1>Statistikk</h1>
                     </div>
-
                 </div>
 
                 <div className="trips-element">
                     <div className="trips-text">
                     <h3 className="non-coloured"> Du har syklet totalt</h3>
                     <h2 className="coloured"> {numberOfTrips} turer</h2>
+                        <PieChart years={years}/>
                     </div>
-                    <div className="pie-element">
-                        <ResponsivePie
-                            data={pies}
-                            margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
-                            innerRadius={0.5}
-                            padAngle={0.7}
-                            cornerRadius={3}
-                            activeOuterRadiusOffset={8}
-                            colors={{ scheme: 'red_yellow_green' }}
-                            borderWidth={1}
-                            borderColor={{ from: 'color', modifiers: [ [ 'darker', 0 ] ] }}
-                            arcLinkLabelsSkipAngle={10}
-                            arcLinkLabelsTextColor="#333333"
-                            arcLinkLabelsThickness={2}
-                            arcLinkLabelsColor={{ from: 'color' }}
-                            arcLabelsTextColor={{ from: 'color', modifiers: [ [ 'darker', 2 ] ] }}
-                            isInteractive={true}
-                            legends={[]}
-                        />
-                    </div>
+
                 </div>
                 <div className="info-element">
                     <div className="month-text">
@@ -278,7 +213,7 @@ function App() {
                     <h2 className="number-of-stations-heading"> Du har besøkt {stationsSortedDescendingTrips.length} ulike stasjoner.</h2>
                     <img className="bike-logo" src={bike}/>
                 </div>
-                <div className="info-element">
+                <div className="top-5">
                     <h2>Topp 5 stasjoner</h2>
                     <tbody>
                     <table className="styled-table">
@@ -292,7 +227,7 @@ function App() {
                     </tbody>
                 </div>
             </div>
-        </div>
+
     );
 }
 
