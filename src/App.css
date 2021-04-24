@@ -22,15 +22,45 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-.App-header {
-  background-color: #282c34;
+.container {
+  /*background-color: #282c34;*/
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*align-items: center;*/
+  /*justify-content: center;*/
   font-size: calc(10px + 2vmin);
+  /*color: white;*/
+}
+
+
+.info-element {
+  flex-grow: 1;
+  min-width: 40vw;
+}
+
+.header {
+  flex-direction: row;
+  display: flex;
+  min-height: 40vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF4D4D;
   color: white;
+}
+
+.header-logo {
+
+
+}
+
+.header-text {
+  font-size: 45px;
+  padding: 30px;
+
+
 }
 
 .App-link {
