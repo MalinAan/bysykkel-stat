@@ -35,9 +35,27 @@
 }
 
 
-.info-element {
+.trips-element,.info-element {
   flex-grow: 1;
   min-width: 40vw;
+}
+
+.trips-element {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.trips-text{
+
+}
+.non-coloured{
+
+}
+.coloured{
+  color: #B33636;
+  font-size: 35px;
 }
 
 .header {
@@ -52,8 +70,18 @@
 }
 
 .header-logo {
+  fill:white;
 
+}
 
+.pie-element {
+  height: 500px;
+  width: 500px;
+}
+
+.line-chart-element {
+  height: 500px;
+  width: 1000px;
 }
 
 .header-text {
