@@ -4,12 +4,68 @@ import logo from "./bysykkel-logo.svg";
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie'
 import { ResponsiveLine } from '@nivo/line'
-import {Line, Pie} from "recharts";
-
 
 const norwegianMonths = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
 
+interface MonthData {
+    monthNumber: number;
+    monthName: string;
+    year: number;
+    trips: number;
+    date: Date;
+    yearString: string;
+}
 
+
+let monthsData:  { [key: string]: MonthData } = {};
+let years: { [key: string]: number } = {};
+
+function getAllMonthsInYearArray(){
+    interface LinesDataToYears {
+        id: string;
+        color: string;
+        data: LineChartData[]
+    }
+
+    interface LineChartData {
+        x: string; // Month
+        y: number; // Trips
+    }
+
+    const numberOfYears = Object.entries(years).length;
+
+    let allYearsWithMonths:LinesDataToYears[]= Object.entries(years).map(([year, _]) =>
+
+        {
+            let emptyMonths: LineChartData[] = norwegianMonths.map(month =>
+                {
+                    return {x: month, y: 0}
+                }
+            )
+            return {
+                id: year,
+                color: "red",
+                data: emptyMonths
+            }
+
+        }
+    )
+
+    //let monthsIntoYears:LinesDataToYears[] = [];
+    Object.entries(monthsData).forEach(([monthKey, monthData]) => {
+        let year = allYearsWithMonths.find(y => y.id == monthData.yearString);
+        if(year) {
+            let month = year.data.find(m => m.x == monthData.monthName)
+            if(month) {
+                month.y = monthData.trips;
+            }
+        }}
+    )
+
+    //const allLines = [{"id": "alle-turer", "color": "red", "data": allYearsWithMonths}]
+    console.log(allYearsWithMonths)
+    return allYearsWithMonths
+}
 
 function App() {
 
@@ -21,18 +77,9 @@ function App() {
     // Hadde vært kult med noe visuelt på antall stasjoner.
 
     const numberOfTrips = data.length
-    interface MonthData {
-        monthNumber: number;
-        monthName: string;
-        year: number;
-        trips: number;
-        date: Date;
-    }
 
-    let years: { [key: string]: number } = {};
     let months: { [key: string]: number } = {};
     let stations: { [key: string]: number } = {};
-    let monthsData:  { [key: string]: MonthData } = {};
     interface PieData {
         id: string;
         value: number;
@@ -73,6 +120,7 @@ function App() {
         } else {
             monthsData[mmyyyy] = {
                 year: date.getFullYear(),
+                yearString: year,
                 monthName: norwegianMonths[date.getMonth()],
                 trips: 1,
                 monthNumber: date.getMonth() + 1,
@@ -138,7 +186,7 @@ function App() {
 
                 <div className="trips-element">
                     <div className="trips-text">
-                    <h2 className="non-coloured"> Du har syklet totalt</h2>
+                    <h3 className="non-coloured"> Du har syklet totalt</h3>
                     <h2 className="coloured"> {numberOfTrips} turer</h2>
                     </div>
                     <div className="pie-element">
@@ -149,7 +197,7 @@ function App() {
                             padAngle={0.7}
                             cornerRadius={3}
                             activeOuterRadiusOffset={8}
-                            colors={{ scheme: 'reds' }}
+                            colors={{ scheme: 'red_yellow_green' }}
                             borderWidth={1}
                             borderColor={{ from: 'color', modifiers: [ [ 'darker', 0 ] ] }}
                             arcLinkLabelsSkipAngle={10}
@@ -163,18 +211,22 @@ function App() {
                     </div>
                 </div>
                 <div className="info-element">
-                    <h3> Mest populære måned var {monthsSortedDescendingTrips[0][0]},
-                        med {monthsSortedDescendingTrips[0][1]} turer! </h3>
+                    <div className="month-text">
+                        <h3> Din mest populære måned var <span className="coloured"> {monthsSortedDescendingTrips[0][0].toLowerCase()},
+                            </span> med {monthsSortedDescendingTrips[0][1]} turer.</h3>
+                        <h3 className="coloured"></h3>
+                    </div>
                     <div className="line-chart-element">
                         <ResponsiveLine
-                            data={allLines}
+                            data={getAllMonthsInYearArray()}
                             margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
                             xScale={{ type: 'point' }}
-                            yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
+                            yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false }}
                             yFormat=" >-.2f"
-                            curve="natural"
+                            curve="basis"
                             axisTop={null}
                             axisRight={null}
+                            lineWidth={6}
                             axisBottom={{
                                 orient: 'bottom',
                                 tickSize: 4,
@@ -195,7 +247,7 @@ function App() {
                             }}
                             enableGridX={false}
                             enableGridY={false}
-                            colors={{ scheme: 'reds' }}
+                            colors={{scheme:"red_yellow_green"}}
                             enablePoints={false}
                             pointSize={10}
                             pointColor={{ theme: 'background' }}
@@ -203,7 +255,7 @@ function App() {
                             pointBorderColor={{ from: 'serieColor', modifiers: [] }}
                             pointLabelYOffset={-12}
                             areaOpacity={0.15}
-                            isInteractive={false}
+                            isInteractive={true}
                             legends={[{
                                 anchor: 'bottom-right',
                                 direction: 'column',
@@ -220,20 +272,9 @@ function App() {
                                 symbolBorderColor: 'rgba(0, 0, 0, .5)',}]}
                         />
                     </div>
-                    <tbody>
-                    <table className="styled-table">
-                        <tr>
-                            <th>Måned</th>
-                            <th>Antall turer</th>
-                        </tr>
-                        {Object.entries(months).map(([month, numberOfTripsPerMonth]) => (
-                            <tr key={month}>
-                                <td>{month}</td>
-                                <td>{numberOfTripsPerMonth}</td>
-                            </tr>
-                        ))}
-                    </table>
-                    </tbody>
+
+
+
                 </div>
                 <div className="info-element">
                     <h3> Du har besøkt totalt {stationsSortedDescendingTrips.length} antall stasjoner!</h3>
