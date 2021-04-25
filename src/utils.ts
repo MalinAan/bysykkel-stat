@@ -30,7 +30,7 @@ export function buildDataStructure(data: any): BikeStats {
     let months: { [key: string]: number } = {}
     let stations: { [key: string]: number } = {}
     let detailedMonthsData: { [key: string]: DetailedMonthData } = {}
-    let numberOfTrips = data.length
+    const numberOfTrips = data.length
 
     data.forEach((trip: any) => {
         const date = new Date(trip._tripStarted)
