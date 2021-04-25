@@ -9,19 +9,13 @@ import Header from "./Header";
 function App() {
     const [tripsData, setTripsData] = useState(data);
     const onDrop = useCallback(acceptedFiles => {
-        const data = acceptedFiles;
-        console.log(data);
-        console.log()
         const reader = new FileReader()
-        reader.onabort = () => console.log('file reading was aborted')
-        reader.onerror = () => console.log('file reading has failed')
+        reader.onabort = () => console.log('File reading was aborted')
+        reader.onerror = () => console.log('File reading has failed')
         reader.onload = () => {
-            // Do whatever you want with the file contents
-            const binaryStr = reader.result
-            console.log("Inside onload!")
-            if(typeof(binaryStr) === "string"){
-                const jsonFile = JSON.parse(binaryStr)
-                console.log("inside converrt!")
+            const textResult = reader.result
+            if(typeof(textResult) === "string"){
+                const jsonFile = JSON.parse(textResult)
                 setTripsData(jsonFile)
             }
 
