@@ -9,3 +9,11 @@ export interface DetailedMonthData {
     date: Date;
     yearString: string;
 }
+
+export interface BikeStats {
+    years: { [key: string]: number };
+    months: { [key: string]: number };
+    stations: { [key: string]: number };
+    detailedMonthsData: { [key: string]: DetailedMonthData };
+    numberOfTrips: number;
+}

@@ -5,20 +5,13 @@ import bike from "./svg/bike.svg";
 import React from 'react';
 import PieChart from "./PieChart";
 import LineChart from "./LineChart";
-import {DetailedMonthData} from "./types";
 import {buildDataStructure, simpleDictionaryToSortedArray} from "./utils";
 
 function App() {
-    const numberOfTrips = data.length
-    let months: { [key: string]: number } = {};
-    let stations: { [key: string]: number } = {};
-    let detailedMonthsData: { [key: string]: DetailedMonthData } = {};
-    let years: { [key: string]: number } = {};
+    const bikeStats = buildDataStructure(data);
 
-    buildDataStructure(years, months, stations, detailedMonthsData);
-
-    const monthsSortedDescendingTrips = simpleDictionaryToSortedArray(months)
-    const stationsSortedDescendingTrips = simpleDictionaryToSortedArray(stations)
+    const monthsSortedDescendingTrips = simpleDictionaryToSortedArray(bikeStats.months)
+    const stationsSortedDescendingTrips = simpleDictionaryToSortedArray(bikeStats.stations)
 
     return (
         <div className="container">
@@ -33,15 +26,15 @@ function App() {
 
             <div className="trips-element">
                 <div className="trips-text">
-                    <h2>Du har syklet totalt <em className="extra-emphasis">{numberOfTrips} turer</em></h2>
-                    <PieChart years={years}/>
+                    <h2>Du har syklet totalt <em className="extra-emphasis">{bikeStats.numberOfTrips} turer</em></h2>
+                    <PieChart years={bikeStats.years}/>
                 </div>
 
             </div>
             <div className="popular-month">
                 <h2>Din mest populære måned var <em> {monthsSortedDescendingTrips[0][0].toLowerCase()},
-                            </em> med {monthsSortedDescendingTrips[0][1]} turer.</h2>
-                <LineChart years={years} monthsData={detailedMonthsData}/>
+                </em> med {monthsSortedDescendingTrips[0][1]} turer.</h2>
+                <LineChart years={bikeStats.years} monthsData={bikeStats.detailedMonthsData}/>
 
             </div>
             <div className="number-of-stations">
