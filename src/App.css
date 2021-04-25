@@ -158,3 +158,45 @@ tr:nth-child(even) { background: #FB7756; }
 .example-stat{
 }
 
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .header-logo {
+        fill: white;
+        flex-direction: row;
+        height: 5em;
+    }
+
+    .header-text {
+        padding: 12px;
+    }
+
+    .download-data-guide {
+        padding: 0;
+    }
+
+    .pre-page {
+        padding: 0em 0.7em;
+    }
+
+    .styled-table {
+        margin: 0 0;
+        font-size: 0.75em;
+        font-family: sans-serif;
+        min-width: 300px;
+        border-spacing: 0px 12px;
+        color: white;
+    }
+
+    .pie-element {
+        height: 300px;
+        width: 350px;
+    }
+
+}
+
+
+
