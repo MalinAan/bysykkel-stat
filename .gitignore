@@ -21,3 +21,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Idea
+.idea/workspace.xml
+.idea/modules.xml
+*.iml
+
+# npm / webpack
+node_modules
+build
+
+# mac OS
+.DS_Store
+
