@@ -1,24 +1,22 @@
 {
   "files": {
-    "main.css": "/bysykkel-stat/static/css/main.5750afd7.chunk.css",
-    "main.js": "/bysykkel-stat/static/js/main.967b0045.chunk.js",
-    "main.js.map": "/bysykkel-stat/static/js/main.967b0045.chunk.js.map",
-    "runtime-main.js": "/bysykkel-stat/static/js/runtime-main.49beb1fa.js",
-    "runtime-main.js.map": "/bysykkel-stat/static/js/runtime-main.49beb1fa.js.map",
-    "static/js/2.7cff96d3.chunk.js": "/bysykkel-stat/static/js/2.7cff96d3.chunk.js",
-    "static/js/2.7cff96d3.chunk.js.map": "/bysykkel-stat/static/js/2.7cff96d3.chunk.js.map",
-    "static/js/3.74436272.chunk.js": "/bysykkel-stat/static/js/3.74436272.chunk.js",
-    "static/js/3.74436272.chunk.js.map": "/bysykkel-stat/static/js/3.74436272.chunk.js.map",
+    "main.css": "/bysykkel-stat/static/css/main.036e3c8b.chunk.css",
+    "main.js": "/bysykkel-stat/static/js/main.f51db987.chunk.js",
+    "main.js.map": "/bysykkel-stat/static/js/main.f51db987.chunk.js.map",
+    "runtime-main.js": "/bysykkel-stat/static/js/runtime-main.a4e42c30.js",
+    "runtime-main.js.map": "/bysykkel-stat/static/js/runtime-main.a4e42c30.js.map",
+    "static/js/2.1e0069c3.chunk.js": "/bysykkel-stat/static/js/2.1e0069c3.chunk.js",
+    "static/js/2.1e0069c3.chunk.js.map": "/bysykkel-stat/static/js/2.1e0069c3.chunk.js.map",
     "index.html": "/bysykkel-stat/index.html",
-    "static/css/main.5750afd7.chunk.css.map": "/bysykkel-stat/static/css/main.5750afd7.chunk.css.map",
-    "static/js/2.7cff96d3.chunk.js.LICENSE.txt": "/bysykkel-stat/static/js/2.7cff96d3.chunk.js.LICENSE.txt",
+    "static/css/main.036e3c8b.chunk.css.map": "/bysykkel-stat/static/css/main.036e3c8b.chunk.css.map",
+    "static/js/2.1e0069c3.chunk.js.LICENSE.txt": "/bysykkel-stat/static/js/2.1e0069c3.chunk.js.LICENSE.txt",
     "static/media/bike.25010c39.svg": "/bysykkel-stat/static/media/bike.25010c39.svg",
     "static/media/bysykkel-logo.95909212.svg": "/bysykkel-stat/static/media/bysykkel-logo.95909212.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.49beb1fa.js",
-    "static/js/2.7cff96d3.chunk.js",
-    "static/css/main.5750afd7.chunk.css",
-    "static/js/main.967b0045.chunk.js"
+    "static/js/runtime-main.a4e42c30.js",
+    "static/js/2.1e0069c3.chunk.js",
+    "static/css/main.036e3c8b.chunk.css",
+    "static/js/main.f51db987.chunk.js"
   ]
 }
