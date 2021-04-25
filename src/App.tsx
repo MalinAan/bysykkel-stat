@@ -1,5 +1,5 @@
 import './App.css';
-import data from "./trips.json";
+import data from "./trips2.json";
 import logo from "./svg/bysykkel-logo.svg";
 import bike from "./svg/bike.svg";
 import React from 'react';
@@ -43,9 +43,11 @@ function App() {
                 <img className="bike-logo" src={bike} alt="Bike"/>
             </div>
             <div className="top-5">
-                <h2>Topp 5 stasjoner</h2>
                 <tbody>
                 <table className="styled-table">
+                    <tr>
+                        <th className="td-header">Topp 5 stasjoner</th>
+                    </tr>
                     {stationsSortedDescendingTrips.slice(0, 5).map(([month, numberOfTripsPerMonth]) => (
                         <tr key={month}>
                             <td className="td-month">{month}</td>
