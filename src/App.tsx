@@ -39,8 +39,8 @@ function App() {
                 </div>
 
             </div>
-            <div className="info-element">
-                <div className="month-text">
+            <div className="popular-month">
+                <div className="popular-month-text">
                     <h3> Din mest populære måned var <span
                         className="coloured"> {monthsSortedDescendingTrips[0][0].toLowerCase()},
                             </span> med {monthsSortedDescendingTrips[0][1]} turer.</h3>
@@ -67,7 +67,6 @@ function App() {
                 </tbody>
             </div>
         </div>
-
     );
 }
 

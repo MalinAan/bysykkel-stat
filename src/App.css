@@ -35,7 +35,7 @@
   font-size: calc(10px + 2vmin);
 }
 
-.trips-element,.info-element, .top-5, .number-of-stations {
+.trips-element,.popular-month, .top-5, .number-of-stations {
   flex-grow: 1;
   min-width: 40%;
 }
@@ -57,7 +57,7 @@
   color: #FB7756;
 }
 
-.month-text {
+.popular-month-text {
   display: flex;
 }
 
