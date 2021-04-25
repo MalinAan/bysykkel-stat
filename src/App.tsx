@@ -9,7 +9,7 @@ import LineChart from "./LineChart";
 
 const norwegianMonths = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
 
-interface MonthData {
+interface DetailedMonthData {
     monthNumber: number;
     monthName: string;
     year: number;
@@ -19,7 +19,7 @@ interface MonthData {
 }
 
 
-let monthsData: { [key: string]: MonthData } = {};
+let detailedMonthsData: { [key: string]: DetailedMonthData } = {};
 let years: { [key: string]: number } = {};
 
 
@@ -30,12 +30,28 @@ function App() {
     let stations: { [key: string]: number } = {};
 
 
-    function addToDictionary(dictionary: { [key: string]: number }, key: string | number) {
+    function addTripToSimpleDictionary(dictionary: { [key: string]: number }, key: string | number) {
         const entryYear = dictionary[key];
         if (entryYear) {
             dictionary[key] = entryYear + 1;
         } else {
             dictionary[key] = 1;
+        }
+    }
+
+    function addTripToDetailedMonthsDataDictionary(monthsData:{[p:string]: DetailedMonthData}, key: string, date:Date, year:string){
+        const entryMonth = monthsData[key];
+        if (entryMonth) {
+            monthsData[key].trips = monthsData[key].trips + 1;
+        } else {
+            monthsData[key] = {
+                year: date.getFullYear(),
+                yearString: year,
+                monthName: norwegianMonths[date.getMonth()],
+                trips: 1,
+                monthNumber: date.getMonth() + 1,
+                date: date
+            }
         }
     }
 
@@ -48,35 +64,26 @@ function App() {
         const startStation = trip._startStation._title;
         const endStation = trip._endStation ? trip._endStation._title : trip._startStation._title;
 
-        addToDictionary(years, year);
-        addToDictionary(months, month);
-        addToDictionary(stations, startStation);
-        addToDictionary(stations, endStation);
+        addTripToSimpleDictionary(years, year);
+        addTripToSimpleDictionary(months, month);
+        addTripToSimpleDictionary(stations, startStation);
+        addTripToSimpleDictionary(stations, endStation);
+        addTripToDetailedMonthsDataDictionary(detailedMonthsData, mmyyyy, date, year)
 
-        const entryMonth = monthsData[mmyyyy];
-        if (entryMonth) {
-            monthsData[mmyyyy].trips = monthsData[mmyyyy].trips + 1;
-        } else {
-            monthsData[mmyyyy] = {
-                year: date.getFullYear(),
-                yearString: year,
-                monthName: norwegianMonths[date.getMonth()],
-                trips: 1,
-                monthNumber: date.getMonth() + 1,
-                date: date
-            }
-
-        }
 
     })
-    const monthsSortedDescendingTrips = Object.entries(months)
-        .sort(([month1, numberOfTripsPerMonth1], [_, numberOfTripsPerMonth2]) => numberOfTripsPerMonth2 - numberOfTripsPerMonth1)
 
-    const stationsSortedDescendingTrips = Object.entries(stations)
-        .sort(([station1, numberOfTripsPerMonth1], [_, numberOfTripsPerMonth2]) => numberOfTripsPerMonth2 - numberOfTripsPerMonth1)
+    function simpleDictionaryToSortedArray(dict:{[key:string]:number}){
+        return Object.entries(dict)
+            .sort(([, numberOfTrips1], [, numberOfTrips2]) =>
+                numberOfTrips2 - numberOfTrips1)
+
+    }
+
+    const monthsSortedDescendingTrips = simpleDictionaryToSortedArray(months)
+    const stationsSortedDescendingTrips = simpleDictionaryToSortedArray(stations)
 
     return (
-
         <div className="container">
             <div className="header">
                 <div>
@@ -101,7 +108,7 @@ function App() {
                         className="coloured"> {monthsSortedDescendingTrips[0][0].toLowerCase()},
                             </span> med {monthsSortedDescendingTrips[0][1]} turer.</h3>
                 </div>
-                <LineChart years={years} monthsData={monthsData}/>
+                <LineChart years={years} monthsData={detailedMonthsData}/>
 
             </div>
             <div className="number-of-stations">
