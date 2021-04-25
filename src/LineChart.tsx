@@ -1,33 +1,22 @@
 import './App.css';
 import React from 'react';
-import {ResponsiveLine} from '@nivo/line'
+import {ResponsiveLine} from '@nivo/line';
+import {DetailedMonthData, norwegianMonths} from "./types";
 
 interface Props {
     years: { [key: string]: number };
-    monthsData: { [key: string]: MonthData }
+    monthsData: { [key: string]: DetailedMonthData }
 }
 
-interface LinesDataToYears {
-    id: string;
-    color: string;
-    data: LineChartData[]
+interface LineChartDataYear {
+    id: string; // Year
+    color: string; // Not used?
+    data: LineChartDataMonth[]
 }
 
-interface LineChartData {
+interface LineChartDataMonth {
     x: string; // Month
     y: number; // Trips
-}
-
-const norwegianMonths = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
-
-
-interface MonthData {
-    monthNumber: number;
-    monthName: string;
-    year: number;
-    trips: number;
-    date: Date;
-    yearString: string;
 }
 
 const LineChart = (props: Props) => {
@@ -35,8 +24,8 @@ const LineChart = (props: Props) => {
     function getAllMonthsInYearArray() {
 
 
-        let allYearsWithMonths: LinesDataToYears[] = Object.entries(props.years).map(([year, _]) => {
-                let emptyMonths: LineChartData[] = norwegianMonths.map(month => {
+        let allYearsWithMonths: LineChartDataYear[] = Object.entries(props.years).map(([year, _]) => {
+                let emptyMonths: LineChartDataMonth[] = norwegianMonths.map(month => {
                         return {x: month, y: 0}
                     }
                 )

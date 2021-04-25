@@ -5,18 +5,7 @@ import bike from "./svg/bike.svg";
 import React from 'react';
 import PieChart from "./PieChart";
 import LineChart from "./LineChart";
-
-
-const norwegianMonths = ["Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
-
-interface DetailedMonthData {
-    monthNumber: number;
-    monthName: string;
-    year: number;
-    trips: number;
-    date: Date;
-    yearString: string;
-}
+import {norwegianMonths, DetailedMonthData} from "./types";
 
 
 let detailedMonthsData: { [key: string]: DetailedMonthData } = {};
