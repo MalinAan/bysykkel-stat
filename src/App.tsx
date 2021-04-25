@@ -1,23 +1,23 @@
 import './App.css';
 import data from "./trips.json";
-import data2 from "./trips3.json";
-import React, {useState, useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import Statistics from "./Statistics";
 import {useDropzone} from 'react-dropzone'
 import Header from "./Header";
 
 function App() {
     const [tripsData, setTripsData] = useState(data);
-    const [showStatistics, setPage] = useState(false);
+    const [showStatistics, showStatisticsPage] = useState(false);
     const onDrop = useCallback(acceptedFiles => {
         const reader = new FileReader()
         reader.onabort = () => console.log('File reading was aborted')
         reader.onerror = () => console.log('File reading has failed')
         reader.onload = () => {
             const textResult = reader.result
-            if(typeof(textResult) === "string"){
+            if (typeof (textResult) === "string") {
                 const jsonFile = JSON.parse(textResult)
                 setTripsData(jsonFile)
+                showStatisticsPage(true)
             }
         }
         reader.readAsText(acceptedFiles[0])
@@ -26,15 +26,35 @@ function App() {
     return (
         <div>
             <Header/>
-            <div {...getRootProps()}>
-                <input {...getInputProps()} />
-                {
-                    isDragActive ?
-                        <p>Dra trip.json hit</p> :
-                        <p>Eller klikk for å velge filer</p>
-                }
-            </div>
+            {!showStatistics && <div className="pre-page">
+                <div className="download-data-guide">
+                    <h3>Last opp din data</h3>
+                    <ol>
+                        <li>Logg inn med din bruker på oslobysykkel.no.</li>
+                        <li>Trykk på “Dine data”.</li>
+                        <li>Trykk på “Lag nye filer”.</li>
+                        <li>Trykk på “Lag JSON-filer”.</li>
+                        <li>Når den er klar, trykk “LAST NED FIL”.</li>
+                        <li>Åpne zip-filen.</li>
+                        <li>Last opp kun trips.json.</li>
+                    </ol>
+                    <div {...getRootProps()}>
+                        <input {...getInputProps()} />
+                        {
+                            isDragActive ?
+                                <p>Dra trip.json hit</p> :
+                                <button>Last opp trips.json her.</button>
+                        }
+                    </div>
+                </div>
+                <div className="example-stat">
+                    <h3>... eller se eksempel statistikk her</h3>
+                    <button onClick={
+                        () => showStatisticsPage(true)
+                    }>Se eksempel statistikk</button>
+                </div>
 
+            </div>}
             {showStatistics && <Statistics tripsData={tripsData}/>}
         </div>
     );

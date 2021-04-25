@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  font-size:3.5em;
+  font-size:2.7em;
 }
 
 h2 {
@@ -20,9 +20,29 @@ h2 em {
   margin-top: 0.5em;
 }
 
+button {
+  background-color: #fb7756;
+  border: none;
+  color: white;
+  padding: 1.5em 2.7em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
+
 h2 em.extra-emphasis {
   font-size: 1.5em;
   display: block;
+}
+
+ol {
+  font-size: 0.8em;
+}
+
+li {
+  padding: 0.5em;
 }
 
 td {
@@ -53,6 +73,7 @@ tr:nth-child(even) { background: #FB7756; }
 .header-logo {
   fill:white;
   flex-direction: row;
+  height: 7em;
 }
 .header-text {
   padding: 30px;
@@ -110,7 +131,7 @@ tr:nth-child(even) { background: #FB7756; }
 }
 
 .line-chart-element {
-  height: 500px;
+  height: 450px;
   width: 100%;
 }
 
@@ -122,3 +143,18 @@ tr:nth-child(even) { background: #FB7756; }
   border-spacing: 0px 25px;
   color:white;
 }
+
+.pre-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.download-data-guide {
+  padding-left: 3em;
+
+}
+.example-stat{
+}
+
