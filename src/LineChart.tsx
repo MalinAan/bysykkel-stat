@@ -39,9 +39,9 @@ const LineChart = (props: Props) => {
         )
 
         Object.entries(props.monthsData).forEach(([monthKey, monthData]) => {
-                let year = allYearsWithMonths.find(y => y.id == monthData.yearString);
+                let year = allYearsWithMonths.find(y => y.id === monthData.yearString);
                 if (year) {
-                    let month = year.data.find(m => m.x == monthData.monthName)
+                    let month = year.data.find(m => m.x === monthData.monthName)
                     if (month) {
                         month.y = monthData.trips;
                     }
