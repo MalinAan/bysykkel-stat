@@ -33,18 +33,14 @@ function App() {
 
             <div className="trips-element">
                 <div className="trips-text">
-                    <h3> Du har syklet totalt</h3>
-                    <h2 className="coloured"> {numberOfTrips} turer</h2>
+                    <h2>Du har syklet totalt <em className="extra-emphasis">{numberOfTrips} turer</em></h2>
                     <PieChart years={years}/>
                 </div>
 
             </div>
             <div className="popular-month">
-                <div className="popular-month-text">
-                    <h3> Din mest populære måned var <span
-                        className="coloured"> {monthsSortedDescendingTrips[0][0].toLowerCase()},
-                            </span> med {monthsSortedDescendingTrips[0][1]} turer.</h3>
-                </div>
+                <h2>Din mest populære måned var <em> {monthsSortedDescendingTrips[0][0].toLowerCase()},
+                            </em> med {monthsSortedDescendingTrips[0][1]} turer.</h2>
                 <LineChart years={years} monthsData={detailedMonthsData}/>
 
             </div>

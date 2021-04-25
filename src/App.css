@@ -4,13 +4,45 @@
   }
 }
 
+/* General styles */
+
+body {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 1.17em;
+}
+
+h2 em {
+  color: #fb7756;
+  text-decoration: none;
+  font-style: normal;
+  margin-top: 0.5em;
+}
+
+h2 em.extra-emphasis {
+  font-size: 1.5em;
+  display: block;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+td {
+  padding: 1.5rem;
+}
+
+tr:nth-child(odd) { background: #E74645; }
+tr:nth-child(even) { background: #FB7756; }
+
 /* Heading */
 
 .header {
   flex-direction: row;
   display: flex;
-  min-height: 40vh;
-  min-width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #E74645;
@@ -28,11 +60,9 @@
 /* Container */
 
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: calc(10px + 2vmin);
 }
 
 .trips-element,.popular-month, .top-5, .number-of-stations {
@@ -46,15 +76,12 @@
   align-items: center;
 }
 
+
 .number-of-stations {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.coloured{
-  color: #FB7756;
 }
 
 .popular-month-text {
@@ -78,19 +105,8 @@
 
 .line-chart-element {
   height: 500px;
-  width: 1000px;
+  width: 100%;
 }
-
-td {
-  padding: 1.5rem;
-}
-
-tr:nth-child(1) { background: #E74645; }
-tr:nth-child(2) { background: #FB7756; }
-tr:nth-child(3) { background: #E74645; }
-tr:nth-child(4) { background: #FB7756; }
-tr:nth-child(5) { background: #E74645; }
-tr:nth-child(6) { background: #FB7756; }
 
 .styled-table {
   margin: 15px 0;
