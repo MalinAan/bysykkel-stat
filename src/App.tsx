@@ -1,17 +1,35 @@
 import './App.css';
-import data from "./trips2.json";
+import data from "./trips.json";
+import data2 from "./trips3.json";
 import logo from "./svg/bysykkel-logo.svg";
-import bike from "./svg/bike.svg";
-import React from 'react';
-import PieChart from "./PieChart";
-import LineChart from "./LineChart";
-import {buildDataStructure, simpleDictionaryToSortedArray} from "./utils";
+import React, {useState, useCallback} from 'react';
+import Statistics from "./Statistics";
+import {useDropzone} from 'react-dropzone'
 
 function App() {
     const [tripsData, setTripsData] = useState(data);
+    const onDrop = useCallback(acceptedFiles => {
+        const data = acceptedFiles;
+        console.log(data);
+        console.log()
+        const reader = new FileReader()
+        reader.onabort = () => console.log('file reading was aborted')
+        reader.onerror = () => console.log('file reading has failed')
+        reader.onload = () => {
+            // Do whatever you want with the file contents
+            const binaryStr = reader.result
+            console.log("Inside onload!")
+            if(typeof(binaryStr) === "string"){
+                const jsonFile = JSON.parse(binaryStr)
+                console.log("inside converrt!")
+                setTripsData(jsonFile)
+            }
 
-    const monthsSortedDescendingTrips = simpleDictionaryToSortedArray(bikeStats.months)
-    const stationsSortedDescendingTrips = simpleDictionaryToSortedArray(bikeStats.stations)
+
+        }
+        reader.readAsText(acceptedFiles[0])
+    }, [])
+    const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
     return (
         <div>
