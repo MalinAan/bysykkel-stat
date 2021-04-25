@@ -5,8 +5,8 @@ import bike from "./svg/bike.svg";
 import React from 'react';
 import PieChart from "./PieChart";
 import LineChart from "./LineChart";
-import {norwegianMonths, DetailedMonthData} from "./types";
-import {addTripToDetailedMonthsDataDictionary, addTripToSimpleDictionary, simpleDictionaryToSortedArray} from "./utils";
+import {DetailedMonthData} from "./types";
+import {buildDataStructure, simpleDictionaryToSortedArray} from "./utils";
 
 function App() {
     const numberOfTrips = data.length
@@ -15,20 +15,7 @@ function App() {
     let detailedMonthsData: { [key: string]: DetailedMonthData } = {};
     let years: { [key: string]: number } = {};
 
-    data.forEach(trip => {
-        const date = new Date(trip._tripStarted)
-        const year = date.getFullYear().toString();
-        const month = norwegianMonths[date.getMonth()] + " " + year;
-        const mmyyyy = date.getMonth() + " " + year;
-        const startStation = trip._startStation._title;
-        const endStation = trip._endStation ? trip._endStation._title : trip._startStation._title;
-
-        addTripToSimpleDictionary(years, year);
-        addTripToSimpleDictionary(months, month);
-        addTripToSimpleDictionary(stations, startStation);
-        addTripToSimpleDictionary(stations, endStation);
-        addTripToDetailedMonthsDataDictionary(detailedMonthsData, mmyyyy, date, year)
-    })
+    buildDataStructure(years, months, stations, detailedMonthsData);
 
     const monthsSortedDescendingTrips = simpleDictionaryToSortedArray(months)
     const stationsSortedDescendingTrips = simpleDictionaryToSortedArray(stations)

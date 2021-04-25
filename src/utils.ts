@@ -1,4 +1,5 @@
 import {DetailedMonthData, norwegianMonths} from "./types";
+import data from "./trips.json";
 
 export function addTripToSimpleDictionary(dictionary: { [key: string]: number }, key: string | number) {
     const entryYear = dictionary[key];
@@ -23,6 +24,27 @@ export function addTripToDetailedMonthsDataDictionary(monthsData: { [p: string]:
             date: date
         }
     }
+}
+
+export function buildDataStructure(
+    years: { [key: string]: number },
+    months: { [key: string]: number },
+    stations: { [key: string]: number },
+    detailedMonthsData: { [key: string]: DetailedMonthData }) {
+    data.forEach(trip => {
+        const date = new Date(trip._tripStarted)
+        const year = date.getFullYear().toString();
+        const month = norwegianMonths[date.getMonth()] + " " + year;
+        const mmyyyy = date.getMonth() + " " + year;
+        const startStation = trip._startStation._title;
+        const endStation = trip._endStation ? trip._endStation._title : trip._startStation._title;
+
+        addTripToSimpleDictionary(years, year);
+        addTripToSimpleDictionary(months, month);
+        addTripToSimpleDictionary(stations, startStation);
+        addTripToSimpleDictionary(stations, endStation);
+        addTripToDetailedMonthsDataDictionary(detailedMonthsData, mmyyyy, date, year)
+    })
 }
 
 export function simpleDictionaryToSortedArray(dict: { [key: string]: number }) {
