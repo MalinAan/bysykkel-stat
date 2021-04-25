@@ -1,7 +1,7 @@
 import './App.css';
-import data from "../src/trips.json";
-import logo from "./bysykkel-logo.svg";
-import bike from "./bike.svg";
+import data from "./trips.json";
+import logo from "./svg/bysykkel-logo.svg";
+import bike from "./svg/bike.svg";
 import React from 'react';
 import PieChart from "./PieChart";
 import LineChart from "./LineChart";
@@ -69,8 +69,6 @@ function App() {
         addTripToSimpleDictionary(stations, startStation);
         addTripToSimpleDictionary(stations, endStation);
         addTripToDetailedMonthsDataDictionary(detailedMonthsData, mmyyyy, date, year)
-
-
     })
 
     function simpleDictionaryToSortedArray(dict: { [key: string]: number }) {
