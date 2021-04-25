@@ -31,13 +31,14 @@ const PieChart = (props: Props) => {
                 innerRadius={0.5}
                 padAngle={0.7}
                 cornerRadius={3}
+                theme={{fontSize:14}}
                 activeOuterRadiusOffset={8}
                 colors={{scheme: 'red_yellow_green'}}
                 borderWidth={1}
                 borderColor={{from: 'color', modifiers: [['darker', 0]]}}
-                arcLinkLabelsSkipAngle={10}
+                arcLinkLabelsSkipAngle={0}
                 arcLinkLabelsTextColor="#333333"
-                arcLinkLabelsThickness={2}
+                arcLinkLabelsThickness={4}
                 arcLinkLabelsColor={{from: 'color'}}
                 arcLabelsTextColor={{from: 'color', modifiers: [['darker', 2]]}}
                 isInteractive={true}
