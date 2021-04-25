@@ -39,7 +39,7 @@ function App() {
         }
     }
 
-    function addTripToDetailedMonthsDataDictionary(monthsData:{[p:string]: DetailedMonthData}, key: string, date:Date, year:string){
+    function addTripToDetailedMonthsDataDictionary(monthsData: { [p: string]: DetailedMonthData }, key: string, date: Date, year: string) {
         const entryMonth = monthsData[key];
         if (entryMonth) {
             monthsData[key].trips = monthsData[key].trips + 1;
@@ -73,7 +73,7 @@ function App() {
 
     })
 
-    function simpleDictionaryToSortedArray(dict:{[key:string]:number}){
+    function simpleDictionaryToSortedArray(dict: { [key: string]: number }) {
         return Object.entries(dict)
             .sort(([, numberOfTrips1], [, numberOfTrips2]) =>
                 numberOfTrips2 - numberOfTrips1)
