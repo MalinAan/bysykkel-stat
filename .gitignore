@@ -34,3 +34,6 @@ build
 # mac OS
 .DS_Store
 
+# Lint
+.eslintcache
+
