@@ -172,6 +172,10 @@ tr:nth-child(even) {
         font-size: 1.7em;
     }
 
+    .popular-month {
+        padding: 0 3px;
+    }
+
     .header-logo {
         fill: white;
         flex-direction: row;
@@ -192,7 +196,7 @@ tr:nth-child(even) {
 
     .styled-table {
         margin: 0 0;
-        font-size: 0.75em;
+        font-size: 0.7em;
         font-family: sans-serif;
         min-width: 300px;
         border-spacing: 0px 12px;
