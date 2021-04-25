@@ -1,161 +1,169 @@
 /* General styles */
-
 body {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 h1 {
-  font-size:2.7em;
+    font-size: 2.7em;
 }
 
+
 h2 {
-  font-size: 1.17em;
-  text-align: center;
+    font-size: 1.17em;
+    text-align: center;
 }
 
 h2 em {
-  color: #fb7756;
-  text-decoration: none;
-  font-style: normal;
-  margin-top: 0.5em;
+    color: #fb7756;
+    text-decoration: none;
+    font-style: normal;
+    margin-top: 0.5em;
 }
 
 button {
-  background-color: #fb7756;
-  border: none;
-  color: white;
-  padding: 1.5em 2.7em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1em;
+    background-color: #fb7756;
+    border: none;
+    color: white;
+    padding: 1.5em 2.7em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
 }
 
 
 h2 em.extra-emphasis {
-  font-size: 1.5em;
-  display: block;
+    font-size: 1.5em;
+    display: block;
 }
 
 ol {
-  font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 li {
-  padding: 0.5em;
+    padding: 0.5em;
 }
 
 td {
-  padding: 1.5rem;
+    padding: 1.5rem;
 }
 
 th {
-  padding: 0.1em;
-  font-size: 1.2em;
-  text-align: left;
-  color: black;
-  background-color: white;
+    padding: 0.1em;
+    font-size: 1.2em;
+    text-align: left;
+    color: black;
+    background-color: white;
 }
 
-tr:nth-child(odd) { background: #E74645; }
-tr:nth-child(even) { background: #FB7756; }
+tr:nth-child(odd) {
+    background: #E74645;
+}
+
+tr:nth-child(even) {
+    background: #FB7756;
+}
 
 /* Heading */
 .header {
-  flex-direction: row;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: #E74645;
-  color: white;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #E74645;
+    color: white;
 }
+
 .header-logo {
-  fill:white;
-  flex-direction: row;
-  height: 7em;
+    fill: white;
+    flex-direction: row;
+    height: 7em;
 }
+
+
 .header-text {
-  padding: 30px;
+    padding: 30px;
 }
 
 /* Everything else */
-
 .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.trips-element,.popular-month, .top-5, .number-of-stations {
-  flex-grow: 1;
-  min-width: 40%;
+.trips-element, .popular-month, .top-5, .number-of-stations {
+    flex-grow: 1;
+    min-width: 40%;
 }
 
 .trips-element {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .number-of-stations {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.top-5{
-  flex-direction: column;
-  display: flex;
-  align-items: center;
+.top-5 {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
 }
 
 .popular-month-text {
-  display: flex;
+    display: flex;
 }
 
-.bike-logo{
-  fill: #FACD60;
-  flex-direction: column;
-  height: 50%;
+.bike-logo {
+    fill: #FACD60;
+    flex-direction: column;
+    height: 50%;
 }
 
 .number-of-stations-heading {
-  flex-direction: column;
+    flex-direction: column;
 }
 
 .pie-element {
-  height: 500px;
-  width: 500px;
+    height: 500px;
+    width: 500px;
 }
 
 .line-chart-element {
-  height: 450px;
-  width: 100%;
+    height: 450px;
+    width: 100%;
 }
 
 .styled-table {
-  margin: 15px 0;
-  font-size: 1em;
-  font-family: sans-serif;
-  min-width: 600px;
-  border-spacing: 0px 25px;
-  color:white;
+    margin: 15px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 600px;
+    border-spacing: 0px 25px;
+    color: white;
 }
 
 .pre-page {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .download-data-guide {
-  padding-left: 3em;
+    padding-left: 3em;
 
 }
-.example-stat{
+
+.example-stat {
 }
 
 @media only screen and (max-width: 900px) {
