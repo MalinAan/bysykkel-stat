@@ -25,8 +25,8 @@ const Statistics = (props: Props) => {
 
             </div>
             <div className="popular-month">
-                <h2>Din mest populære måned var <em> {monthsSortedDescendingTrips[0][0].toLowerCase()},
-                </em> med {monthsSortedDescendingTrips[0][1]} turer.</h2>
+                <h2>Din mest populære måned var <em> {monthsSortedDescendingTrips[0][0].toLowerCase()}</em>,
+                 med {monthsSortedDescendingTrips[0][1]} turer.</h2>
                 <LineChart years={bikeStats.years} monthsData={bikeStats.detailedMonthsData}/>
 
             </div>
