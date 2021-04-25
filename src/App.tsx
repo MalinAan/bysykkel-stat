@@ -8,6 +8,7 @@ import Header from "./Header";
 
 function App() {
     const [tripsData, setTripsData] = useState(data);
+    const [showStatistics, setPage] = useState(false);
     const onDrop = useCallback(acceptedFiles => {
         const reader = new FileReader()
         reader.onabort = () => console.log('File reading was aborted')
@@ -18,13 +19,10 @@ function App() {
                 const jsonFile = JSON.parse(textResult)
                 setTripsData(jsonFile)
             }
-
-
         }
         reader.readAsText(acceptedFiles[0])
     }, [])
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
-
     return (
         <div>
             <Header/>
@@ -36,7 +34,8 @@ function App() {
                         <p>Eller klikk for å velge filer</p>
                 }
             </div>
-            <Statistics tripsData={tripsData}/>
+
+            {showStatistics && <Statistics tripsData={tripsData}/>}
         </div>
     );
 }
