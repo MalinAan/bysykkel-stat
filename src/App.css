@@ -70,11 +70,16 @@ tr:nth-child(even) { background: #FB7756; }
   align-items: center;
 }
 
-
 .number-of-stations {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.top-5{
+  flex-direction: column;
+  display: flex;
   align-items: center;
 }
 
