@@ -6,44 +6,14 @@ import React from 'react';
 import PieChart from "./PieChart";
 import LineChart from "./LineChart";
 import {norwegianMonths, DetailedMonthData} from "./types";
-
-
-let detailedMonthsData: { [key: string]: DetailedMonthData } = {};
-let years: { [key: string]: number } = {};
-
+import {addTripToDetailedMonthsDataDictionary, addTripToSimpleDictionary, simpleDictionaryToSortedArray} from "./utils";
 
 function App() {
-
     const numberOfTrips = data.length
     let months: { [key: string]: number } = {};
     let stations: { [key: string]: number } = {};
-
-
-    function addTripToSimpleDictionary(dictionary: { [key: string]: number }, key: string | number) {
-        const entryYear = dictionary[key];
-        if (entryYear) {
-            dictionary[key] = entryYear + 1;
-        } else {
-            dictionary[key] = 1;
-        }
-    }
-
-    function addTripToDetailedMonthsDataDictionary(monthsData: { [p: string]: DetailedMonthData }, key: string, date: Date, year: string) {
-        const entryMonth = monthsData[key];
-        if (entryMonth) {
-            monthsData[key].trips = monthsData[key].trips + 1;
-        } else {
-            monthsData[key] = {
-                year: date.getFullYear(),
-                yearString: year,
-                monthName: norwegianMonths[date.getMonth()],
-                trips: 1,
-                monthNumber: date.getMonth() + 1,
-                date: date
-            }
-        }
-    }
-
+    let detailedMonthsData: { [key: string]: DetailedMonthData } = {};
+    let years: { [key: string]: number } = {};
 
     data.forEach(trip => {
         const date = new Date(trip._tripStarted)
@@ -59,13 +29,6 @@ function App() {
         addTripToSimpleDictionary(stations, endStation);
         addTripToDetailedMonthsDataDictionary(detailedMonthsData, mmyyyy, date, year)
     })
-
-    function simpleDictionaryToSortedArray(dict: { [key: string]: number }) {
-        return Object.entries(dict)
-            .sort(([, numberOfTrips1], [, numberOfTrips2]) =>
-                numberOfTrips2 - numberOfTrips1)
-
-    }
 
     const monthsSortedDescendingTrips = simpleDictionaryToSortedArray(months)
     const stationsSortedDescendingTrips = simpleDictionaryToSortedArray(stations)
