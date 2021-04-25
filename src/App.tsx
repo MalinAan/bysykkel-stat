@@ -7,19 +7,17 @@ import Header from "./Header";
 
 function App() {
     const [tripsData, setTripsData] = useState(data);
-    const [showStatistics, showStatisticsPage] = useState(false);
+    const [showStatistics, setShowStatistics] = useState(false);
     const onDrop = useCallback(acceptedFiles => {
-        const reader = new FileReader()
-        reader.onabort = () => console.log('File reading was aborted')
-        reader.onerror = () => console.log('File reading has failed')
+        const reader = new FileReader();
         reader.onload = () => {
-            const textResult = reader.result
+            const textResult = reader.result;
             if (typeof (textResult) === "string") {
-                const jsonFile = JSON.parse(textResult)
-                setTripsData(jsonFile)
-                showStatisticsPage(true)
+                const jsonFile = JSON.parse(textResult);
+                setTripsData(jsonFile);
+                setShowStatistics(true);
             }
-        }
+        };
         reader.readAsText(acceptedFiles[0])
     }, [])
     const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
@@ -48,10 +46,10 @@ function App() {
                     </div>
                 </div>
                 <div className="example-stat">
-                    <h3>... eller se eksempel statistikk her</h3>
+                    <h3>... eller se eksempel på statistikk her</h3>
                     <button onClick={
-                        () => showStatisticsPage(true)
-                    }>Se eksempel statistikk</button>
+                        () => setShowStatistics(true)
+                    }>Se eksempelstatistikk</button>
                 </div>
 
             </div>}
