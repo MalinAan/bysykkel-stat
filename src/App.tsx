@@ -1,10 +1,10 @@
 import './App.css';
 import data from "./trips.json";
 import data2 from "./trips3.json";
-import logo from "./svg/bysykkel-logo.svg";
 import React, {useState, useCallback} from 'react';
 import Statistics from "./Statistics";
 import {useDropzone} from 'react-dropzone'
+import Header from "./Header";
 
 function App() {
     const [tripsData, setTripsData] = useState(data);
@@ -33,22 +33,7 @@ function App() {
 
     return (
         <div>
-            <div className="header">
-                <div>
-                    <img className="header-logo" src={logo} alt="Header logo"/>
-                </div>
-                <div className="header-text">
-                    <h1>Statistikk</h1>
-                    <p>You clicked times</p>
-                    <button
-                        onClick={
-                            () => setTripsData(data2)
-                        }
-                    >
-                        Click me
-                    </button>
-                </div>
-            </div>
+            <Header/>
             <div {...getRootProps()}>
                 <input {...getInputProps()} />
                 {
