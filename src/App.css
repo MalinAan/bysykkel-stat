@@ -92,6 +92,7 @@ tr:nth-child(even) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0px 50px;
 }
 
 .trips-element, .popular-month, .top-5, .number-of-stations {
@@ -174,6 +175,10 @@ tr:nth-child(even) {
 
     .popular-month {
         padding: 0 3px;
+    }
+
+    .container {
+        padding: 0px 0px;
     }
 
     .header-logo {
