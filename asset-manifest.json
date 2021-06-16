@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/bysykkel-stat/static/css/main.4d293c11.chunk.css",
-    "main.js": "/bysykkel-stat/static/js/main.6b01673d.chunk.js",
-    "main.js.map": "/bysykkel-stat/static/js/main.6b01673d.chunk.js.map",
+    "main.css": "/bysykkel-stat/static/css/main.345afaf6.chunk.css",
+    "main.js": "/bysykkel-stat/static/js/main.00cad8cc.chunk.js",
+    "main.js.map": "/bysykkel-stat/static/js/main.00cad8cc.chunk.js.map",
     "runtime-main.js": "/bysykkel-stat/static/js/runtime-main.a4e42c30.js",
     "runtime-main.js.map": "/bysykkel-stat/static/js/runtime-main.a4e42c30.js.map",
     "static/js/2.aea80384.chunk.js": "/bysykkel-stat/static/js/2.aea80384.chunk.js",
     "static/js/2.aea80384.chunk.js.map": "/bysykkel-stat/static/js/2.aea80384.chunk.js.map",
     "index.html": "/bysykkel-stat/index.html",
-    "static/css/main.4d293c11.chunk.css.map": "/bysykkel-stat/static/css/main.4d293c11.chunk.css.map",
+    "static/css/main.345afaf6.chunk.css.map": "/bysykkel-stat/static/css/main.345afaf6.chunk.css.map",
     "static/js/2.aea80384.chunk.js.LICENSE.txt": "/bysykkel-stat/static/js/2.aea80384.chunk.js.LICENSE.txt",
     "static/media/bike.25010c39.svg": "/bysykkel-stat/static/media/bike.25010c39.svg",
     "static/media/bysykkel-logo.95909212.svg": "/bysykkel-stat/static/media/bysykkel-logo.95909212.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.a4e42c30.js",
     "static/js/2.aea80384.chunk.js",
-    "static/css/main.4d293c11.chunk.css",
-    "static/js/main.6b01673d.chunk.js"
+    "static/css/main.345afaf6.chunk.css",
+    "static/js/main.00cad8cc.chunk.js"
   ]
 }
