@@ -22,8 +22,6 @@ interface LineChartDataMonth {
 const LineChart = (props: Props) => {
 
     function getAllMonthsInYearArray() {
-
-
         let allYearsWithMonths: LineChartDataYear[] = Object.entries(props.years).map(([year, _]) => {
                 let emptyMonths: LineChartDataMonth[] = norwegianMonths.map(month => {
                         return {x: month, y: 0}
@@ -49,13 +47,19 @@ const LineChart = (props: Props) => {
             }
         )
 
+
         return allYearsWithMonths
+    }
+
+    function smallScreen() {
+        const mediaMatch = window.matchMedia('(max-width: 900px)');
+        return mediaMatch.matches;
     }
 
     return (<div className="line-chart-element">
         <ResponsiveLine
             data={getAllMonthsInYearArray()}
-            margin={{top: 50, right: 110, bottom: 50, left: 60}}
+            margin={{top: 50, right: smallScreen() ? 30 : 110, bottom: 50, left: 60}}
             xScale={{type: 'point'}}
             yScale={{type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false}}
             yFormat=" >-.2f"
@@ -67,7 +71,7 @@ const LineChart = (props: Props) => {
                 orient: 'bottom',
                 tickSize: 4,
                 tickPadding: 4,
-                tickRotation: 0,
+                tickRotation: smallScreen() ? -40 : 0,
                 legend: '',
                 legendOffset: -60,
                 legendPosition: 'middle'
@@ -83,7 +87,7 @@ const LineChart = (props: Props) => {
             }}
             enableGridX={false}
             enableGridY={false}
-            colors={["#F98404", "#d73027","#fee08b", "#FFC947","#a50026",  "#f46d43", "#5d0013"]}
+            colors={["#F98404", "#d73027", "#fee08b", "#FFC947", "#a50026", "#f46d43", "#5d0013"]}
             enablePoints={false}
             pointSize={10}
             pointColor={{theme: 'background'}}
@@ -93,14 +97,14 @@ const LineChart = (props: Props) => {
             areaOpacity={0.15}
             isInteractive={true}
             legends={[{
-                anchor: 'bottom-right',
-                direction: 'column',
+                anchor: smallScreen() ? 'top-right' : 'bottom-right',
+                direction: smallScreen() ? 'row' : 'column',
                 justify: false,
-                translateX: 100,
+                translateX: smallScreen() ? -10 : 100,
                 translateY: 0,
-                itemsSpacing: 0,
+                itemsSpacing: smallScreen() ? 35 : 0,
                 itemDirection: 'left-to-right',
-                itemWidth: 80,
+                itemWidth: smallScreen() ? 15 : 80,
                 itemHeight: 20,
                 itemOpacity: 0.75,
                 symbolSize: 12,
