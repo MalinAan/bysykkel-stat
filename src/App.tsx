@@ -4,6 +4,7 @@ import React, {useCallback, useState} from 'react';
 import Statistics from "./Statistics";
 import {useDropzone} from 'react-dropzone'
 import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
     const [tripsData, setTripsData] = useState(data);
@@ -54,6 +55,7 @@ function App() {
 
             </div>}
             {showStatistics && <Statistics tripsData={tripsData}/>}
+            <Footer/>
         </div>
     );
 }
