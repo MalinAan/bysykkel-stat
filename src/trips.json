@@ -1,5 +1,603 @@
 [
   {
+    "_id": "45241663",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-06-15T19:27:16.960Z",
+    "_tripEnded": "2021-06-15T19:31:47.411Z",
+    "_tripDuration": 270,
+    "_startStation": {
+      "_id": "525",
+      "_subtitle": "ved Bentsenbrua",
+      "_title": "Myraløkka Øst",
+      "_coords": {
+        "_latitude": 59.937205,
+        "_longitude": 10.7605813
+      }
+    },
+    "_endStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    }
+  },
+  {
+    "_id": "45153419",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-06-11T09:17:39.950Z",
+    "_tripEnded": "2021-06-11T09:24:05.863Z",
+    "_tripDuration": 385,
+    "_startStation": {
+      "_id": "383",
+      "_subtitle": "langs Uelands gate",
+      "_title": "Arkitekt Rivertz Plass",
+      "_coords": {
+        "_latitude": 59.934936,
+        "_longitude": 10.749466
+      }
+    },
+    "_endStation": {
+      "_id": "561",
+      "_subtitle": "ved Gørbitz' gate",
+      "_title": "Kirkeveien",
+      "_coords": {
+        "_latitude": 59.93347989334691,
+        "_longitude": 10.726294394131088
+      }
+    }
+  },
+  {
+    "_id": "45137481",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-06-10T15:37:33.680Z",
+    "_tripEnded": "2021-06-10T15:51:00.653Z",
+    "_tripDuration": 806,
+    "_startStation": {
+      "_id": "421",
+      "_subtitle": "langs Maridalsveien",
+      "_title": "Alexander Kiellands Plass",
+      "_coords": {
+        "_latitude": 59.92806670615684,
+        "_longitude": 10.751202636819613
+      }
+    },
+    "_endStation": {
+      "_id": "1023",
+      "_subtitle": "ved Kristian IVs gate",
+      "_title": "Professor Aschehougs plass",
+      "_coords": {
+        "_latitude": 59.9147672,
+        "_longitude": 10.740971
+      }
+    }
+  },
+  {
+    "_id": "45039609",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-06-06T14:29:39.995Z",
+    "_tripEnded": "2021-06-06T14:44:07.356Z",
+    "_tripDuration": 867,
+    "_startStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    },
+    "_endStation": {
+      "_id": "460",
+      "_subtitle": "langs Jens Bjelkes gate",
+      "_title": "Botanisk Hage sør",
+      "_coords": {
+        "_latitude": 59.915417698024385,
+        "_longitude": 10.76933022142641
+      }
+    }
+  },
+  {
+    "_id": "45009633",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-06-04T18:48:43.175Z",
+    "_tripEnded": "2021-06-04T19:04:50.258Z",
+    "_tripDuration": 967,
+    "_startStation": {
+      "_id": "529",
+      "_subtitle": "langs Slemdalsveien",
+      "_title": "Friggfeltet",
+      "_coords": {
+        "_latitude": 59.9327726,
+        "_longitude": 10.7114661
+      }
+    },
+    "_endStation": {
+      "_id": "433",
+      "_subtitle": "langs Uelandsgt ved Colletts",
+      "_title": "Ila",
+      "_coords": {
+        "_latitude": 59.931828,
+        "_longitude": 10.748745
+      }
+    }
+  },
+  {
+    "_id": "45000562",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-06-04T13:53:27.760Z",
+    "_tripEnded": "2021-06-04T14:09:41.805Z",
+    "_tripDuration": 974,
+    "_startStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    },
+    "_endStation": {
+      "_id": "590",
+      "_subtitle": "langs Bogstadveien",
+      "_title": "Majorstua skole",
+      "_coords": {
+        "_latitude": 59.9294351,
+        "_longitude": 10.7136816
+      }
+    }
+  },
+  {
+    "_id": "44866460",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-29T16:52:12.004Z",
+    "_tripEnded": "2021-05-29T17:10:45.734Z",
+    "_tripDuration": 1113,
+    "_startStation": {
+      "_id": "574",
+      "_subtitle": "langs Schweigaards gate",
+      "_title": "Annette Thommessens Plass",
+      "_coords": {
+        "_latitude": 59.9107393,
+        "_longitude": 10.7609998
+      }
+    },
+    "_endStation": {
+      "_id": "398",
+      "_subtitle": "ved Sannergata",
+      "_title": "Ringnes Park",
+      "_coords": {
+        "_latitude": 59.92843404417577,
+        "_longitude": 10.75943014633117
+      }
+    }
+  },
+  {
+    "_id": "44697138",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-20T20:59:11.543Z",
+    "_tripEnded": "2021-05-20T21:32:10.639Z",
+    "_tripDuration": 1979,
+    "_startStation": {
+      "_id": "512",
+      "_subtitle": "langs Ensjøveien",
+      "_title": "Ensjø T-bane",
+      "_coords": {
+        "_latitude": 59.9131891,
+        "_longitude": 10.7897605
+      }
+    },
+    "_endStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    }
+  },
+  {
+    "_id": "44689347",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-20T15:25:50.796Z",
+    "_tripEnded": "2021-05-20T15:42:23.475Z",
+    "_tripDuration": 992,
+    "_startStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    },
+    "_endStation": {
+      "_id": "612",
+      "_subtitle": "ved turvei",
+      "_title": "Ensjøveien",
+      "_coords": {
+        "_latitude": 59.91662195885618,
+        "_longitude": 10.783309055819714
+      }
+    }
+  },
+  {
+    "_id": "44600873",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-15T12:00:30.587Z",
+    "_tripEnded": "2021-05-15T12:06:05.260Z",
+    "_tripDuration": 334,
+    "_startStation": {
+      "_id": "525",
+      "_subtitle": "ved Bentsenbrua",
+      "_title": "Myraløkka Øst",
+      "_coords": {
+        "_latitude": 59.937205,
+        "_longitude": 10.7605813
+      }
+    },
+    "_endStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    }
+  },
+  {
+    "_id": "44583024",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-14T09:34:02.316Z",
+    "_tripEnded": "2021-05-14T09:48:35.152Z",
+    "_tripDuration": 872,
+    "_startStation": {
+      "_id": "575",
+      "_subtitle": "ved Ullevål Stadion T-bane",
+      "_title": "Sognsveien",
+      "_coords": {
+        "_latitude": 59.94743324225673,
+        "_longitude": 10.732569703704815
+      }
+    },
+    "_endStation": {
+      "_id": "555",
+      "_subtitle": "ved Colletts gate",
+      "_title": "Griffenfeldts gate",
+      "_coords": {
+        "_latitude": 59.9337026,
+        "_longitude": 10.7519299
+      }
+    }
+  },
+  {
+    "_id": "44582577",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-14T09:05:08.858Z",
+    "_tripEnded": "2021-05-14T09:23:25.646Z",
+    "_tripDuration": 1096,
+    "_startStation": {
+      "_id": "529",
+      "_subtitle": "langs Slemdalsveien",
+      "_title": "Friggfeltet",
+      "_coords": {
+        "_latitude": 59.9327726,
+        "_longitude": 10.7114661
+      }
+    },
+    "_endStation": {
+      "_id": "575",
+      "_subtitle": "ved Ullevål Stadion T-bane",
+      "_title": "Sognsveien",
+      "_coords": {
+        "_latitude": 59.94743324225673,
+        "_longitude": 10.732569703704815
+      }
+    }
+  },
+  {
+    "_id": "44581437",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-14T07:53:04.484Z",
+    "_tripEnded": "2021-05-14T08:03:45.370Z",
+    "_tripDuration": 640,
+    "_startStation": {
+      "_id": "470",
+      "_subtitle": "krysset Colletts gt / Geitmyrsveien",
+      "_title": "St. Hanshaugen park nord",
+      "_coords": {
+        "_latitude": 59.92979845370007,
+        "_longitude": 10.743540765932096
+      }
+    },
+    "_endStation": {
+      "_id": "579",
+      "_subtitle": "ved Sporveisgata",
+      "_title": "Bogstadveien",
+      "_coords": {
+        "_latitude": 59.924732,
+        "_longitude": 10.724628
+      }
+    }
+  },
+  {
+    "_id": "44368944",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-01T21:09:38.533Z",
+    "_tripEnded": "2021-05-01T21:17:51.839Z",
+    "_tripDuration": 493,
+    "_startStation": {
+      "_id": "521",
+      "_subtitle": "ved Hausmanns gate",
+      "_title": "Jess Carlsens gate",
+      "_coords": {
+        "_latitude": 59.9186359,
+        "_longitude": 10.7523939
+      }
+    },
+    "_endStation": {
+      "_id": "421",
+      "_subtitle": "langs Maridalsveien",
+      "_title": "Alexander Kiellands Plass",
+      "_coords": {
+        "_latitude": 59.92806670615684,
+        "_longitude": 10.751202636819613
+      }
+    }
+  },
+  {
+    "_id": "44367818",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-05-01T17:54:18.953Z",
+    "_tripEnded": "2021-05-01T18:00:12.040Z",
+    "_tripDuration": 353,
+    "_startStation": {
+      "_id": "421",
+      "_subtitle": "langs Maridalsveien",
+      "_title": "Alexander Kiellands Plass",
+      "_coords": {
+        "_latitude": 59.92806670615684,
+        "_longitude": 10.751202636819613
+      }
+    },
+    "_endStation": {
+      "_id": "521",
+      "_subtitle": "ved Hausmanns gate",
+      "_title": "Jess Carlsens gate",
+      "_coords": {
+        "_latitude": 59.9186359,
+        "_longitude": 10.7523939
+      }
+    }
+  },
+  {
+    "_id": "44332794",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-04-29T12:58:10.013Z",
+    "_tripEnded": "2021-04-29T13:10:28.742Z",
+    "_tripDuration": 738,
+    "_startStation": {
+      "_id": "535",
+      "_subtitle": "vest for Slottsparken",
+      "_title": "Uranienborgveien",
+      "_coords": {
+        "_latitude": 59.9200421,
+        "_longitude": 10.726634
+      }
+    },
+    "_endStation": {
+      "_id": "421",
+      "_subtitle": "langs Maridalsveien",
+      "_title": "Alexander Kiellands Plass",
+      "_coords": {
+        "_latitude": 59.92806670615684,
+        "_longitude": 10.751202636819613
+      }
+    }
+  },
+  {
+    "_id": "44332611",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-04-29T12:45:08.857Z",
+    "_tripEnded": "2021-04-29T12:55:26.705Z",
+    "_tripDuration": 617,
+    "_startStation": {
+      "_id": "617",
+      "_subtitle": "ved Uelands gate",
+      "_title": "Bjerregaardsgate Øst",
+      "_coords": {
+        "_latitude": 59.92716771401357,
+        "_longitude": 10.749754560118863
+      }
+    },
+    "_endStation": {
+      "_id": "535",
+      "_subtitle": "vest for Slottsparken",
+      "_title": "Uranienborgveien",
+      "_coords": {
+        "_latitude": 59.9200421,
+        "_longitude": 10.726634
+      }
+    }
+  },
+  {
+    "_id": "44157817",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-04-19T16:41:19.027Z",
+    "_tripEnded": "2021-04-19T16:49:49.239Z",
+    "_tripDuration": 510,
+    "_startStation": {
+      "_id": "614",
+      "_subtitle": "langs Hans Nielsen Hauges gate",
+      "_title": "Sinsen T-bane",
+      "_coords": {
+        "_latitude": 59.938863086921295,
+        "_longitude": 10.780603250331886
+      }
+    },
+    "_endStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    }
+  },
+  {
+    "_id": "43989485",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-04-07T17:03:27.069Z",
+    "_tripEnded": "2021-04-07T17:11:29.156Z",
+    "_tripDuration": 482,
+    "_startStation": {
+      "_id": "433",
+      "_subtitle": "langs Uelandsgt ved Colletts",
+      "_title": "Ila",
+      "_coords": {
+        "_latitude": 59.931828,
+        "_longitude": 10.748745
+      }
+    },
+    "_endStation": {
+      "_id": "556",
+      "_subtitle": "ved Sporveisgata",
+      "_title": "Pilestredet",
+      "_coords": {
+        "_latitude": 59.9262242,
+        "_longitude": 10.7296246
+      }
+    }
+  },
+  {
+    "_id": "43914142",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-03-31T10:54:52.794Z",
+    "_tripEnded": "2021-03-31T11:01:57.672Z",
+    "_tripDuration": 424,
+    "_startStation": {
+      "_id": "463",
+      "_subtitle": "ved biblioteket",
+      "_title": "Schous plass trikkestopp",
+      "_coords": {
+        "_latitude": 59.9207284,
+        "_longitude": 10.7594857
+      }
+    },
+    "_endStation": {
+      "_id": "398",
+      "_subtitle": "ved Sannergata",
+      "_title": "Ringnes Park",
+      "_coords": {
+        "_latitude": 59.92843404417577,
+        "_longitude": 10.75943014633117
+      }
+    }
+  },
+  {
+    "_id": "37570800",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-02-20T16:46:40.766Z",
+    "_tripEnded": "2021-02-20T16:55:56.614Z",
+    "_tripDuration": 555,
+    "_startStation": {
+      "_id": "444",
+      "_subtitle": "langs Maridalsveien",
+      "_title": "AHO",
+      "_coords": {
+        "_latitude": 59.925265,
+        "_longitude": 10.750462
+      }
+    },
+    "_endStation": {
+      "_id": "437",
+      "_subtitle": "ved Arbeidersamfunnets plass",
+      "_title": "Sentrum Scene",
+      "_coords": {
+        "_latitude": 59.91546786564256,
+        "_longitude": 10.751140873016311
+      }
+    }
+  },
+  {
+    "_id": "37541817",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-02-09T16:35:59.024Z",
+    "_tripEnded": "2021-02-09T16:53:42.966Z",
+    "_tripDuration": 1063,
+    "_startStation": {
+      "_id": "480",
+      "_subtitle": "langs Grønlandsleiret",
+      "_title": "Helga Helgesens plass",
+      "_coords": {
+        "_latitude": 59.9121109,
+        "_longitude": 10.7661939
+      }
+    },
+    "_endStation": {
+      "_id": "398",
+      "_subtitle": "ved Sannergata",
+      "_title": "Ringnes Park",
+      "_coords": {
+        "_latitude": 59.92843404417577,
+        "_longitude": 10.75943014633117
+      }
+    }
+  },
+  {
+    "_id": "37528980",
+    "_systemId": "oslobysykkel",
+    "_systemCountryCode": "NO",
+    "_tripStarted": "2021-02-04T15:44:05.364Z",
+    "_tripEnded": "2021-02-04T15:52:53.947Z",
+    "_tripDuration": 528,
+    "_startStation": {
+      "_id": "593",
+      "_subtitle": "langs Sandakerveien",
+      "_title": "Bjølsen mølle",
+      "_coords": {
+        "_latitude": 59.9392403070359,
+        "_longitude": 10.768771317790996
+      }
+    },
+    "_endStation": {
+      "_id": "607",
+      "_subtitle": "ved Akerselva",
+      "_title": "Marcus Thranes gate",
+      "_coords": {
+        "_latitude": 59.93277225626508,
+        "_longitude": 10.758594919923468
+      }
+    }
+  },
+  {
     "_id": "37517920",
     "_systemId": "oslobysykkel",
     "_systemCountryCode": "NO",
@@ -529,7 +1127,7 @@
     "_startStation": {
       "_id": "507",
       "_subtitle": "langs Trondheimsveien",
-      "_title": "Jens Bjelkes gate",
+      "_title": "Jens Bjelkes Gate",
       "_coords": {
         "_latitude": 59.919179,
         "_longitude": 10.764162
@@ -2369,8 +2967,8 @@
       "_subtitle": "ved gangbroen",
       "_title": "Sukkerbiten",
       "_coords": {
-        "_latitude": 59.90580676630004,
-        "_longitude": 10.753656509579287
+        "_latitude": 59.905124380703484,
+        "_longitude": 10.753763553726515
       }
     },
     "_endStation": {
@@ -2395,8 +2993,8 @@
       "_subtitle": "ved gangbroen",
       "_title": "Sukkerbiten",
       "_coords": {
-        "_latitude": 59.90580676630004,
-        "_longitude": 10.753656509579287
+        "_latitude": 59.905124380703484,
+        "_longitude": 10.753763553726515
       }
     },
     "_endStation": {
