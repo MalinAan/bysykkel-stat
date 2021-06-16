@@ -83,7 +83,7 @@ const LineChart = (props: Props) => {
             }}
             enableGridX={false}
             enableGridY={false}
-            colors={{scheme: "red_yellow_green"}}
+            colors={["#F98404", "#d73027","#fee08b", "#FFC947","#a50026",  "#f46d43", "#5d0013"]}
             enablePoints={false}
             pointSize={10}
             pointColor={{theme: 'background'}}
