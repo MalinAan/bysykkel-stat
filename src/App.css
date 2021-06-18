@@ -65,7 +65,12 @@ tr:nth-child(even) {
     background: #FB7756;
 }
 
-/* Heading */
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+/* Header and footer */
 .header {
     flex-direction: row;
     display: flex;
@@ -74,6 +79,7 @@ tr:nth-child(even) {
     align-items: center;
     background-color: #E74645;
     color: white;
+    margin-bottom: 30px;
 }
 
 .header-logo {
@@ -83,8 +89,38 @@ tr:nth-child(even) {
 }
 
 
-.header-text {
+.header-text, .footer-container {
     padding: 30px;
+
+}
+
+.footer-container{
+    width: 70%;
+}
+
+.footer {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #E74645;
+    color: white;
+    margin-top: 60px;
+}
+
+.contact-list {
+    list-style-type: none;
+    display:table-row;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.contact-element {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Everything else */
