@@ -42,7 +42,7 @@ function App() {
                         {
                             isDragActive ?
                                 <p>Dra trip.json hit</p> :
-                                <button>Last opp trips.json her.</button>
+                                <button>Last opp trips.json</button>
                         }
                     </div>
                 </div>
