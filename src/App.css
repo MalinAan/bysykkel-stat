@@ -28,7 +28,8 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1em;
+    font-size: 0.7em;
+    border-radius: 3rem;
 }
 
 
@@ -77,8 +78,8 @@ a {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #E74645;
-    color: white;
+    color: #E74645;
+    /*color: white;*/
     margin-bottom: 30px;
 }
 
@@ -89,13 +90,17 @@ a {
 }
 
 
-.header-text, .footer-container {
+.header-text {
     padding: 30px;
 
 }
 
-.footer-container{
+.footer-container {
     width: 70%;
+    padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 100px;
 }
 
 .footer {
@@ -106,12 +111,13 @@ a {
     align-items: center;
     background-color: #E74645;
     color: white;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
 .contact-list {
     list-style-type: none;
-    display:table-row;
+    display: table-row;
+    font-size: 20px;
 }
 
 .icon {
@@ -207,6 +213,13 @@ a {
     /* For mobile phones: */
     h1 {
         font-size: 1.7em;
+    }
+
+    .footer-container {
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 40px;
     }
 
     .popular-month {
