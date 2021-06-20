@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bysykkel-stat/static/css/main.e475d64e.chunk.css",
-    "main.js": "/bysykkel-stat/static/js/main.2f82d45c.chunk.js",
-    "main.js.map": "/bysykkel-stat/static/js/main.2f82d45c.chunk.js.map",
+    "main.js": "/bysykkel-stat/static/js/main.52e034fb.chunk.js",
+    "main.js.map": "/bysykkel-stat/static/js/main.52e034fb.chunk.js.map",
     "runtime-main.js": "/bysykkel-stat/static/js/runtime-main.a4e42c30.js",
     "runtime-main.js.map": "/bysykkel-stat/static/js/runtime-main.a4e42c30.js.map",
     "static/js/2.bae8eec8.chunk.js": "/bysykkel-stat/static/js/2.bae8eec8.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a4e42c30.js",
     "static/js/2.bae8eec8.chunk.js",
     "static/css/main.e475d64e.chunk.css",
-    "static/js/main.2f82d45c.chunk.js"
+    "static/js/main.52e034fb.chunk.js"
   ]
 }
