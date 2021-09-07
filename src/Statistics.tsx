@@ -45,6 +45,7 @@ const Statistics = (props: Props) => {
                             <td>{numberOfTripsPerMonth}</td>
                         </tr>
                     ))}
+                    {console.log(stationsSortedDescendingTrips)}
                     </tbody>
                 </table>
             </div>
