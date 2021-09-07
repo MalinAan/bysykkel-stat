@@ -22,13 +22,11 @@ const Statistics = (props: Props) => {
                     <h2>Du har syklet totalt <em className="extra-emphasis">{bikeStats.numberOfTrips} turer</em></h2>
                     <PieChart years={bikeStats.years}/>
                 </div>
-
             </div>
             <div className="popular-month">
                 <h2>Din mest populære måned var <em> {monthsSortedDescendingTrips[0][0].toLowerCase()}</em>,
                  med {monthsSortedDescendingTrips[0][1]} turer.</h2>
                 <LineChart years={bikeStats.years} monthsData={bikeStats.detailedMonthsData}/>
-
             </div>
             <div className="number-of-stations">
                 <h2 className="number-of-stations-heading"> Du har besøkt {stationsSortedDescendingTrips.length} ulike
@@ -36,7 +34,6 @@ const Statistics = (props: Props) => {
                 <img className="bike-logo" src={bike} alt="Bike"/>
             </div>
             <div className="top-5">
-
                 <table className="styled-table">
                     <tbody>
                     <tr>
@@ -50,7 +47,6 @@ const Statistics = (props: Props) => {
                     ))}
                     </tbody>
                 </table>
-
             </div>
         </div>
     )
