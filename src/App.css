@@ -11,6 +11,7 @@ h1 {
 h2 {
     font-size: 1.17em;
     text-align: center;
+    font-weight: 400;
 }
 
 h2 em {
@@ -18,6 +19,11 @@ h2 em {
     text-decoration: none;
     font-style: normal;
     margin-top: 0.5em;
+}
+
+h3 {
+    font-size: 1.17em;
+    font-weight: 400;
 }
 
 button {
@@ -43,7 +49,8 @@ ol {
 }
 
 li {
-    padding: 0.5em;
+    padding: 0.7em;
+    font-weight: 300;
 }
 
 td {
@@ -56,6 +63,7 @@ th {
     text-align: left;
     color: black;
     background-color: white;
+    font-weight: 400;
 }
 
 tr:nth-child(odd) {
@@ -79,7 +87,6 @@ a {
     justify-content: center;
     align-items: center;
     color: #E74645;
-    /*color: white;*/
     margin-bottom: 30px;
 }
 
@@ -135,6 +142,15 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0px 50px;
+}
+
+.links {
+    font-family: monospace;
+    letter-spacing: -2px;
+}
+
+.oslo-bysykkel-link {
+    color: rgb(0, 95, 201);
 }
 
 .trips-element, .popular-month, .top-5, .number-of-stations {

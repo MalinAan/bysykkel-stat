@@ -33,15 +33,15 @@ function App() {
                 <Route>
                     <div className="pre-page">
                         <div className="download-data-guide">
-                            <h3>Last opp din data</h3>
+                            <h3>Last opp dine data</h3>
                             <ol>
-                                <li>Logg inn med din bruker på oslobysykkel.no.</li>
-                                <li>Trykk på “Dine data”.</li>
-                                <li>Trykk på “Lag nye filer”.</li>
-                                <li>Trykk på “Lag JSON-filer”.</li>
-                                <li>Når den er klar, trykk “LAST NED FIL”.</li>
+                                <li>Logg inn med din bruker på <a href="https://oslobysykkel.no/" target="_blank" className="oslo-bysykkel-link">Oslo Bysykkel</a>.</li>
+                                <li>Trykk på  <span className="links">Dine data</span>.</li>
+                                <li>Trykk på <span className="links">Lag nye filer</span>.</li>
+                                <li>Trykk på <span className="links">Lag JSON-filer</span>.</li>
+                                <li>Når den er klar, trykk <span className="links">LAST NED FIL.</span></li>
                                 <li>Åpne zip-filen.</li>
-                                <li>Last opp kun trips.json.</li>
+                                <li>Last opp kun <span className="links">trips.json</span>.</li>
                             </ol>
                             <div {...getRootProps()}>
                                 <input {...getInputProps()} />
