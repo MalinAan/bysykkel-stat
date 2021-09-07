@@ -26,6 +26,7 @@ yarn-error.log*
 .idea/workspace.xml
 .idea/modules.xml
 *.iml
+.idea/.idea.bysykkel-stat.dir/
 
 # npm / webpack
 node_modules
