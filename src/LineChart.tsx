@@ -68,7 +68,7 @@ const LineChart = (props: Props) => {
             axisRight={null}
             lineWidth={6}
             axisBottom={{
-                orient: 'bottom',
+                //orient: 'bottom',
                 tickSize: 4,
                 tickPadding: 4,
                 tickRotation: smallScreen() ? -40 : 0,
@@ -77,7 +77,7 @@ const LineChart = (props: Props) => {
                 legendPosition: 'middle'
             }}
             axisLeft={{
-                orient: 'left',
+                //orient: 'left',
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
