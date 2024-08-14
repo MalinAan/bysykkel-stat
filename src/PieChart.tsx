@@ -31,7 +31,7 @@ const PieChart = (props: Props) => {
                 innerRadius={0.5}
                 padAngle={0.7}
                 cornerRadius={3}
-                theme={{fontSize:14}}
+                //theme={{fontSize:14}}
                 activeOuterRadiusOffset={8}
                 colors={{scheme: 'red_yellow_green'}}
                 borderWidth={1}
