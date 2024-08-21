@@ -62,11 +62,11 @@ const LineChart = (props: Props) => {
             margin={{top: 50, right: smallScreen() ? 30 : 110, bottom: 50, left: 60}}
             xScale={{type: 'point'}}
             yScale={{type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false}}
-            yFormat=" >-.2f"
-            curve="basis"
+            //yFormat=" >-.2f"
+            curve="linear"
             axisTop={null}
             axisRight={null}
-            lineWidth={6}
+            lineWidth={2}
             axisBottom={{
                 //orient: 'bottom',
                 tickSize: 4,
@@ -87,9 +87,11 @@ const LineChart = (props: Props) => {
             }}
             enableGridX={false}
             enableGridY={false}
-            colors={["#F98404", "#d73027", "#fee08b", "#FFC947", "#a50026", "#f46d43", "#5d0013"]}
-            enablePoints={false}
-            pointSize={10}
+            //colors={["#F98404", "#d73027", "#fee08b", "#FFC947", "#a50026", "#f46d43", "#5d0013"]}
+            colors={{scheme: 'red_yellow_green'}}
+            enableSlices={'x'}
+            enablePoints={true}
+            pointSize={5}
             pointColor={{theme: 'background'}}
             pointBorderWidth={2}
             pointBorderColor={{from: 'serieColor', modifiers: []}}
