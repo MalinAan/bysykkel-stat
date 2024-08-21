@@ -62,11 +62,11 @@ const LineChart = (props: Props) => {
             margin={{top: 50, right: smallScreen() ? 30 : 110, bottom: 50, left: 60}}
             xScale={{type: 'point'}}
             yScale={{type: 'linear', min: 'auto', max: 'auto', stacked: false, reverse: false}}
-            yFormat=" >-.2f"
-            curve="basis"
+            //yFormat=" >-.2f"
+            curve="linear"
             axisTop={null}
             axisRight={null}
-            lineWidth={6}
+            lineWidth={2}
             axisBottom={{
                 //orient: 'bottom',
                 tickSize: 4,
