@@ -194,11 +194,13 @@ a {
 .pie-element {
     height: 500px;
     width: 500px;
+    font-size: 14px;
 }
 
 .line-chart-element {
     height: 450px;
     width: 100%;
+    font-size: 14px;
 }
 
 .styled-table {
