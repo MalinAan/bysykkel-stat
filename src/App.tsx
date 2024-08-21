@@ -1,5 +1,5 @@
 import './App.css';
-import data from "./trips.json";
+import data from "./trips3.json";
 import React, {useCallback, useState} from 'react';
 import Statistics from "./Statistics";
 import {useDropzone} from 'react-dropzone'
