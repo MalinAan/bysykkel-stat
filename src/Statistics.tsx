@@ -40,7 +40,7 @@ const Statistics = (props: Props) => {
                         <th className="td-header">Topp 5 stasjoner</th>
                     </tr>
                     {stationsSortedDescendingTrips.slice(0, 5).map(([month, numberOfTripsPerMonth]) => (
-                        <tr key={month}>
+                        <tr key={month} className="popular-stations">
                             <td className="td-month">{month}</td>
                             <td>{numberOfTripsPerMonth}</td>
                         </tr>

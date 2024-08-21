@@ -66,11 +66,11 @@ th {
     font-weight: 400;
 }
 
-tr:nth-child(odd) {
+tr.popular-stations:nth-child(odd) {
     background: #E74645;
 }
 
-tr:nth-child(even) {
+tr.popular-stations:nth-child(even) {
     background: #FB7756;
 }
 
